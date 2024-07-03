@@ -1,12 +1,12 @@
 package com.bptn.olubunmi.online_shopping_system.data;
 
-public class User {
+public class UserData {
     private String username;
     private String password;
     private String email;
     private String address;
 
-    public User(String username, String password, String email, String address) {
+    public UserData(String username, String password, String email, String address) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -20,16 +20,14 @@ public class User {
     public String getPassword() {
         return password;
     }
-    
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserData{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }
-   
 }
