@@ -5,7 +5,7 @@ package com.bptn.olubunmi.online_shopping_system.data;
  */
 public class UserData {
     private String username;
-    private String password;
+   public String password;
     private String email;
     private String address;
 
@@ -37,6 +37,11 @@ public class UserData {
      */
     public String getPassword() {
         return password;
+    }
+    
+    
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     
