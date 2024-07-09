@@ -14,27 +14,15 @@ public class UserService {
     // Method to add a new user to the list
     public void addUser(UserData newUser) {
         users.add(newUser);
+        System.out.println("User registered: " + newUser.getUsername()); // Debugging print statement
     }
 
     // Method to update an existing user's details
     public void updateUser(UserData updatedUser) {
-        for (UserData user : users) {
-            if (user.getUsername().equals(updatedUser.getUsername())) {
-                user.setPassword(updatedUser.getPassword()); // Update password
-                // 	user.setEmail(updatedUser.getEmail());
-                //  user.setAddress(updatedUser.getAddress());
-                break; // Exit loop once user is updated
-            }
-        }
+        users.stream()
+             .filter(user -> user.getUsername().equals(updatedUser.getUsername()))
+             .forEach(user -> user.setPassword(updatedUser.getPassword())); // Update password using lambda expression
     }
-//    trying to use lambda expression
-//    
-//    public void updateUser(UserData updatedUser) {
-//        users.stream()
-//                .filter(user -> user.getUsername().equals(updatedUser.getUsername()))
-//                .forEach(user -> user.setPassword(updatedUser.getPassword()));
-//    }
-
 
     // Method to retrieve a user by their username
     public UserData getUserByUsername(String username) {
@@ -45,5 +33,17 @@ public class UserService {
         }
         return null; // Return null if user is not found
     }
-}
 
+    // Method to retrieve a user by their username and password
+    public UserData getUserByUsernameAndPassword(String username, String password) {
+        for (UserData user : users) {
+            System.out.println("Checking user: " + user.getUsername()); // printing out to see to check
+            
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                System.out.println("User found: " + user.getUsername()); // printing out to check if this is returning the user name
+                return user; // Return the user object if found
+            }
+        }
+        return null; // Return null if user is not found
+    }
+}

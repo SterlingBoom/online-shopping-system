@@ -16,11 +16,17 @@ public class ShoppingCart {
     public void addProduct(Product product) {
         products.add(product);
     }
+    
+    // Remove a product from the shopping cart.
+    public void removeProduct(Product product) {
+        products.remove(product);
+    }
 
     // Method to get the list of products in the cart
     public List<Product> getProducts() {
         return products;
     }
+    
 
     // Method to calculate the total price of all products in the cart
     public double calculateTotal() {
@@ -34,6 +40,10 @@ public class ShoppingCart {
     // Method to check if the cart is empty
     public boolean isEmpty() {
         return products.isEmpty();
+    }
+
+    public List<Product> getProductsInCart() {
+        return products;
     }
 
     // Method to clear all products from the cart

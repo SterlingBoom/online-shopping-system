@@ -52,5 +52,11 @@ public class ProductService {
         }
         return null; // Return null if product with specified ID is not found
     }
+
+
+    public List<Product> getAllProducts() {
+        return products;
+    }
+
 }
 

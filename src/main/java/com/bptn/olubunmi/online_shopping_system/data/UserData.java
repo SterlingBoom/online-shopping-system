@@ -5,7 +5,7 @@ package com.bptn.olubunmi.online_shopping_system.data;
  */
 public class UserData {
     private String username;
-   public String password;
+    private String password;
     private String email;
     private String address;
 
