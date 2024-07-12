@@ -24,8 +24,8 @@ public class OnlineShoppingSystem {
 
     // Constructor to initialize the Online Shopping System
     public OnlineShoppingSystem() {
-      getServiceStarted(); // Initializes necessary services
-        getStartedWithDummyData(); // Initializes dummy users and products for demonstration
+      getServiceStarted(); // Initializes  services
+        getStartedWithDummyData(); // Initializes dummy users and products 
     }
 
     // Method to initialize services required for the system
@@ -197,6 +197,6 @@ public class OnlineShoppingSystem {
     // Main method to start the Online Shopping System application
     public static void main(String[] args) {
         OnlineShoppingSystem shoppingSystem = new OnlineShoppingSystem();
-        shoppingSystem.show(); // Starting the main interaction loop of the application
+        shoppingSystem.show(); // Starting  application
     }
 }

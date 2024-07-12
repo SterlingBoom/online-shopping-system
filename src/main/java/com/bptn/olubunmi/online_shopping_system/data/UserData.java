@@ -31,10 +31,10 @@ public class UserData {
         return username;
     }
 
-    /**
-     * Retrieves the password of the user.
-     * @return The password of the user.
-     */
+    
+//      Retrieves the password of the user.
+//      return The password of the user.
+     
     public String getPassword() {
         return password;
     }
